@@ -40,7 +40,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
 # -----------------------------------------------------------------------------
 # System dependencies
 # -----------------------------------------------------------------------------
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN apt-get update && apt-get install -y  \
     python${PYTHON_VERSION} \
     python${PYTHON_VERSION}-dev \
     python3-pip \
