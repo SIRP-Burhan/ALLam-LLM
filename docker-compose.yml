@@ -1,0 +1,73 @@
+# =============================================================================
+# docker-compose.yml — local GPU testing before serverless deployment
+# Usage: docker compose up
+# =============================================================================
+
+services:
+  vllm:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        HF_TOKEN: ${HF_TOKEN}             # from .env file or shell environment
+        MODEL_ID: humain-ai/ALLaM-7B-Instruct-preview
+        VLLM_VERSION: "0.9.0"
+
+    image: allam-vllm:latest
+    container_name: allam-vllm
+
+    # -------------------------------------------------------------------------
+    # Runtime environment overrides
+    # -------------------------------------------------------------------------
+    environment:
+      MODEL_ID: humain-ai/ALLaM-7B-Instruct-preview
+      HOST: "0.0.0.0"
+      PORT: "8000"
+      DTYPE: "auto"
+      MAX_MODEL_LEN: "4096"
+      GPU_MEMORY_UTILIZATION: "0.90"
+      TENSOR_PARALLEL_SIZE: "1"
+      HUGGING_FACE_HUB_TOKEN: ${HF_TOKEN}
+
+    # -------------------------------------------------------------------------
+    # GPU access — requires nvidia-container-toolkit on the host
+    # -------------------------------------------------------------------------
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1                    # set to 'all' for multi-GPU
+              capabilities: [gpu]
+
+    # -------------------------------------------------------------------------
+    # Ports
+    # -------------------------------------------------------------------------
+    ports:
+      - "8000:8000"
+
+    # -------------------------------------------------------------------------
+    # Volumes
+    # Model cache is persisted so weights aren't re-downloaded on restart
+    # -------------------------------------------------------------------------
+    volumes:
+      - model_cache:/app/model_cache
+
+    # -------------------------------------------------------------------------
+    # Resource limits (adjust to your H100 80GB setup)
+    # -------------------------------------------------------------------------
+    shm_size: "16g"                       # shared memory for multi-process ops
+
+    restart: unless-stopped
+
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 120s                  # allow model load time
+
+# Named volume for HuggingFace model cache
+volumes:
+  model_cache:
+    driver: local
