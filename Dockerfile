@@ -52,8 +52,6 @@ RUN apt-get update && apt-get install -y  \
     pciutils \
     libgomp1 \
     # Required for some CUDA ops
-    libnccl2 \
-    libnccl-dev \
     && rm -rf /var/lib/apt/lists/*
 
 # Make python3.10 the default python
