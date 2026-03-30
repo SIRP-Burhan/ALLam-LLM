@@ -61,16 +61,9 @@ RUN update-alternatives --install /usr/bin/python python /usr/bin/python${PYTHON
 # -----------------------------------------------------------------------------
 # Python dependencies
 # -----------------------------------------------------------------------------
-RUN pip install --no-cache-dir --upgrade pip setuptools wheel
+RUN pip install --no-cache-dir --upgrade pip
 
-RUN pip install --no-cache-dir \
-    vllm==${VLLM_VERSION} \
-    transformers \
-    accelerate \
-    pillow \
-    huggingface_hub \
-    # Health check / HTTP utility
-    httpx
+RUN pip install -U vllm transformers accelerate pillow
 
 # -----------------------------------------------------------------------------
 # App directory setup
