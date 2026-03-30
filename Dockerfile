@@ -4,7 +4,7 @@
 # Base: NVIDIA CUDA 12.1 + Ubuntu 22.04
 # =============================================================================
 
-FROM nvidia/cuda:12.1.0-cudnn8-devel-ubuntu22.04
+FROM nvidia/cuda:12.1.0-base-ubuntu22.04
 
 # -----------------------------------------------------------------------------
 # Build arguments — override at build time via --build-arg
