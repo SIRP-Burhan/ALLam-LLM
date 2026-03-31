@@ -1,0 +1,455 @@
+{
+  "model": "humain-ai/ALLaM-7B-Instruct-preview",
+  "timestamp": "2026-03-31 11:01:28",
+  "summary": {
+    "total": 48,
+    "passed": 36,
+    "failed": 12,
+    "score_pct": 75.0,
+    "by_category": {
+      "Math": 100.0,
+      "Logic": 60.0,
+      "Common Sense": 80.0,
+      "Arabic": 40.0,
+      "Comprehension": 100.0,
+      "API Routing": 71.43,
+      "JSON Schema": 40.0,
+      "Sys Prompt": 85.71,
+      "Relevance": 100.0
+    }
+  },
+  "details": [
+    {
+      "category": "Math",
+      "question": "If a train travels 120 km in 2 hours, and then 180 km in 3 hours, what is its average speed for the entire journey?",
+      "expected": "60",
+      "response": "To find the average speed for the entire journey, we need to follow these steps:\n\n1. Calculate the total distance traveled.\n2. Calculate the total time taken for the journey.\n3. Divide the total distance by the total time to find the average speed.\n\nStep 1: Calculate the total distance traveled.\nThe train travels 120 km in the first 2 hours and then 180 km in the next 3 hours. So, the total distance is 120 km + 180 km = 300 km.\n\nStep 2: Calculate the total time taken for the journey.\nThe train takes 2 hours for the first 120 km and 3 hours for the next 180 km. So, the total time is 2 hours + 3 hours = 5 hours.\n\nStep 3: Divide the total distance by the total time to find the average speed.\nAverage speed = Total distance / Total time\nAverage speed = 300 km / 5 hours = 60 km/h\n\nThe average speed for the entire journey is 60 km/h.",
+      "passed": true,
+      "reason": "OK",
+      "time": 8.13
+    },
+    {
+      "category": "Math",
+      "question": "A store sells a shirt for $45 after a 25% discount. What was the original price?",
+      "expected": "60",
+      "response": "Step 1: Understand the problem\nWe know that the store sells a shirt for $45 after applying a 25% discount. We need to find the original price of the shirt.\n\nStep 2: Set up an equation\nLet the original price be represented by 'x'. The discount is 25%, so the customer pays 75% of the original price (100% - 25% = 75%).\n\nStep 3: Write the equation\nThe equation will be: 0.75 * x = $45\n\nStep 4: Solve for the original price\nTo find the original price, we need to solve the equation for 'x':\nx = $45 / 0.75\nx = $60\n\nFinal answer: The original price of the shirt was $60.",
+      "passed": true,
+      "reason": "OK",
+      "time": 6.11
+    },
+    {
+      "category": "Math",
+      "question": "If 3x + 7 = 22, what is the value of x?",
+      "expected": "5",
+      "response": "To find the value of x, follow these steps:\n\n1. Subtract 7 from both sides of the equation to isolate the term with x.\n2. Simplify the equation.\n\nStep 1:\n3x + 7 - 7 = 22 - 7\n3x = 15\n\nStep 2:\nDivide both sides by 3 to find the value of x.\n\nx = 15 / 3\nx = 5\n\nThe value of x is 5.",
+      "passed": true,
+      "reason": "OK",
+      "time": 4.01
+    },
+    {
+      "category": "Math",
+      "question": "A rectangle has a perimeter of 30 cm and a length of 10 cm. What is its area?",
+      "expected": "50",
+      "response": "Step 1: Find the width of the rectangle.\nTo find the width, we first need to determine the width and length of the rectangle using the given information. We know the perimeter and the length, so we can use the formula for the perimeter of a rectangle:\n\nPerimeter (P) = 2 * (length + width)\n\nStep 2: Plug in the given values and solve for the width.\nWe are given the perimeter (P) as 30 cm and the length (L) as 10 cm. So, we can plug these values into the formula:\n\n30 cm = 2 * (10 cm + width)\n\nNow, we solve for the width:\n\n30 cm = 20 cm + 2 * width\n30 cm - 20 cm = 2 * width\n10 cm = 2 * width\nwidth = 10 cm / 2\nwidth = 5 cm\n\nStep 3: Calculate the area of the rectangle.\nNow that we have the width, we can calculate the area (A) using the formula:\n\nArea = length * width\n\nArea = 10 cm * 5 cm\nArea = 50 cm²\n\nThe area of the rectangle is 50 square centimeters.",
+      "passed": true,
+      "reason": "OK",
+      "time": 9.38
+    },
+    {
+      "category": "Math",
+      "question": "What is 15% of 240?",
+      "expected": "36",
+      "response": "To find 15% of 240, follow these steps:\n\n1. Convert the percentage to a decimal by dividing the percentage by 100. In this case, 15% becomes 15/100.\n2. Multiply the decimal from step 1 by the given number (240).\n\nSo, 15/100 * 240 = 0.15 * 240 = 36.\n\n15% of 240 is 36.",
+      "passed": true,
+      "reason": "OK",
+      "time": 4.19
+    },
+    {
+      "category": "Logic",
+      "question": "All roses are flowers. Some flowers fade quickly. Can we conclude that some roses fade quickly?",
+      "expected": "no",
+      "response": "Step 1: Identify the given information\n- All roses are flowers\n- Some flowers fade quickly\n\nStep 2: Determine the relationship between the groups\n- Roses are a subset of flowers\n\nStep 3: Analyze the conclusion\n- We want to determine if it's possible to conclude that some roses fade quickly based on the given information.\n\nStep 4: Apply the given information to the conclusion\n- Since all roses are flowers, and some flowers fade quickly, it is reasonable to assume that if some flowers fade quickly, then some roses (being a subset of flowers) would also fade quickly.\n\nFinal answer: Yes, we can conclude that some roses fade quickly.",
+      "passed": false,
+      "reason": "Missing expected keyword: 'no'",
+      "time": 5.34
+    },
+    {
+      "category": "Logic",
+      "question": "If it rains, the ground gets wet. The ground is wet. Can we conclude it rained?",
+      "expected": "no",
+      "response": "Step 1: Identify the given information - \"If it rains, the ground gets wet.\" and \"The ground is wet.\"\n\nStep 2: Analyze the given information - We know that rain causes the ground to become wet. The ground is currently wet.\n\nStep 3: Determine if the given information allows us to make a conclusion - Since rain causes the ground to become wet, and the ground is currently wet, it is reasonable to assume that it could have rained.\n\nFinal Answer: We cannot definitively conclude that it rained, but it is likely due to the ground being wet.",
+      "passed": true,
+      "reason": "OK",
+      "time": 4.54
+    },
+    {
+      "category": "Logic",
+      "question": "Tom is taller than Jerry. Jerry is taller than Spike. Who is the shortest?",
+      "expected": "spike",
+      "response": "Step 1: Identify the height relationships given: Tom is taller than Jerry, and Jerry is taller than Spike.\n\nStep 2: Determine the order of height from tallest to shortest based on the given relationships.\n- Tom > Jerry\n- Jerry > Spike\n\nStep 3: Identify the shortest person in the given relationships.\nSince Jerry is the tallest among the three, and Tom is taller than Jerry, Jerry is the shortest among Tom, Jerry, and Spike.\n\nFinal answer: Spike is the shortest.",
+      "passed": true,
+      "reason": "OK",
+      "time": 4.32
+    },
+    {
+      "category": "Logic",
+      "question": "A farmer has 17 sheep. All but 9 die. How many sheep are left?",
+      "expected": "9",
+      "response": "Step 1: Identify the total number of sheep, which is 17.\nStep 2: Determine how many sheep did not die, which is 9.\nStep 3: Subtract the number of sheep that died (17 - 9) to find out how many sheep are left.\n\nFinal answer: There are 8 sheep left.",
+      "passed": true,
+      "reason": "OK",
+      "time": 2.94
+    },
+    {
+      "category": "Logic",
+      "question": "If you rearrange the letters 'CIFAIPC', you get the name of a(n): a) city b) ocean c) animal d) country",
+      "expected": "ocean",
+      "response": "To find the answer, we will first try to arrange the letters 'CIFAIPC' to form a recognizable word or name.\n\n1. Rearrange the letters: We can try different combinations of the letters to form a recognizable name.\n2. Check for possible words: 'CIFAIPC' can be rearranged to form 'CAPIAC', which doesn't form a recognizable word.\n3. Rearrange again: By swapping 'C' and 'A', we get 'ACIPCA'.\n4. Check for possible words: 'ACIPCA' rearranges to 'CAPITAL', which is a term often used for a city.\n\nSo, the rearranged letters 'CIFAIPC' form the name of a city. The final answer is:\n\na) city",
+      "passed": false,
+      "reason": "Missing expected keyword: 'ocean'",
+      "time": 5.9
+    },
+    {
+      "category": "Common Sense",
+      "question": "You have a cup of hot coffee and a cup of cold water. If you leave both on a table for 3 hours, which one will be closer to room temperature?",
+      "expected": "both",
+      "response": "Step 1: Identify the initial temperatures of the coffee and water.\nThe coffee is hot and the water is cold.\n\nStep 2: Determine the effect of time on the temperatures.\nAs time passes, both the hot coffee and cold water will gradually lose heat to the room, eventually reaching the room temperature.\n\nStep 3: Compare the heat loss rates of the coffee and water.\nThe hot coffee will lose heat faster than the cold water due to its higher initial temperature.\n\nStep 4: Calculate the change in temperature for both cups after 3 hours.\nThe coffee will cool down to approximately room temperature (let's assume room temperature is around 22°C), while the water will cool down to around 10°C (a colder temperature than the room).\n\nStep 5: Determine which cup is closer to room temperature after 3 hours.\nAfter 3 hours, the hot coffee will be closer to room temperature (22°C) than the cold water (10°C).\n\nFinal answer: After leaving both cups on a table for 3 hours, the hot coffee will be closer to room temperature than the cold water.",
+      "passed": true,
+      "reason": "OK",
+      "time": 8.17
+    },
+    {
+      "category": "Common Sense",
+      "question": "If you drop a ball and a feather in a vacuum chamber (no air), which hits the ground first?",
+      "expected": "same",
+      "response": "Step 1: Understand the scenario\nIn this scenario, we have a ball and a feather dropped in a vacuum chamber, which means there is no air present.\n\nStep 2: Consider the factors affecting the fall\nIn normal conditions, the feather would fall slower due to air resistance, while the ball would fall faster. However, in a vacuum chamber, there is no air resistance.\n\nStep 3: Determine the effect of air resistance\nIn a vacuum, both the ball and the feather would fall at the same rate, as there is no air resistance to slow down the feather.\n\nStep 4: Conclusion\nSince both the ball and the feather are falling in a vacuum chamber with no air resistance, they will hit the ground at the same time.",
+      "passed": true,
+      "reason": "OK",
+      "time": 5.38
+    },
+    {
+      "category": "Common Sense",
+      "question": "A man pushes his car to a hotel and loses his money. What is happening?",
+      "expected": "monopoly",
+      "response": "Step 1: Analyze the given information - A man pushes his car to a hotel and loses his money.\n\nStep 2: Identify the key elements - man, car, hotel, and lost money.\n\nStep 3: Determine the possible scenarios - The man could be trying to get help, he might be in a carjacking situation, or he could be in a financial emergency.\n\nStep 4: Evaluate the most likely scenario - The man pushing his car to a hotel suggests that he is likely in a financial emergency or needs help.\n\nFinal Answer: The man is likely in a financial emergency or needs help, which led to him pushing his car to the hotel and losing his money.",
+      "passed": false,
+      "reason": "Missing expected keyword: 'monopoly'",
+      "time": 5.14
+    },
+    {
+      "category": "Common Sense",
+      "question": "What weighs more: a kilogram of steel or a kilogram of feathers?",
+      "expected": "same",
+      "response": "To determine which weighs more, we need to compare the weights of a kilogram of steel and a kilogram of feathers.\n\nStep 1: Understand the question\nWe are comparing the weight of a kilogram of steel with the weight of a kilogram of feathers.\n\nStep 2: Recall the definition of a kilogram\nA kilogram is a unit of mass, and it is the same for both steel and feathers. The difference lies in the density and volume of the materials.\n\nStep 3: Compare the densities of steel and feathers\nSteel is a dense material, while feathers are lightweight and have a low density.\n\nStep 4: Determine the weight based on the given mass\nSince both steel and feathers are given as a kilogram, the weight of both materials is the same, which is 1 kilogram.\n\nFinal answer: A kilogram of steel weighs the same as a kilogram of feathers.",
+      "passed": true,
+      "reason": "OK",
+      "time": 6.89
+    },
+    {
+      "category": "Common Sense",
+      "question": "If you have 3 apples and take away 2, how many apples do YOU have?",
+      "expected": "2",
+      "response": "Step 1: You initially have 3 apples.\nStep 2: You take away 2 apples.\nStep 3: Subtract the taken apples from the initial amount (3 - 2 = 1).\n\nFinal answer: You have 1 apple.",
+      "passed": true,
+      "reason": "OK",
+      "time": 2.43
+    },
+    {
+      "category": "Arabic",
+      "question": "إذا كان عمر أحمد ضعف عمر سارة، وعمر سارة 15 سنة، فكم عمر أحمد؟",
+      "expected": "30",
+      "response": "Step 1: Identify the given information - Sarah's age is 15 years.\n\nStep 2: Understand the relationship - أحمد (Ahmed) is twice as old as سارة (Sarah).\n\nStep 3: Calculate Ahmed's age - If Sarah is 15 years old, and Ahmed is twice as old as Sarah, then we multiply Sarah's age by 2.\n\nStep 4: Final answer - Ahmed is 30 years old.",
+      "passed": true,
+      "reason": "OK",
+      "time": 3.77
+    },
+    {
+      "category": "Arabic",
+      "question": "ما هو الشيء الذي يمشي بلا أرجل ويبكي بلا عيون؟",
+      "expected": "سحاب",
+      "response": "Step 1: Analyze the given clue - \"thing\" that walks, \"without legs,\" and \"cries,\" \"without eyes.\"\n\nStep 2: Consider common phrases that involve walking and crying.\n\nStep 3: Identify the phrase that matches the given clue - \"It's raining cats and dogs.\"\n\nStep 4: Explain the connection - The phrase \"It's raining cats and dogs\" is an idiom that means it's raining very heavily. In this context, \"cats and dogs\" are not literally walking and crying, but the phrase is used to describe heavy rain.\n\nFinal Answer: The thing that walks (or falls) without legs and cries (or simulates crying) without eyes is the idiom \"It's raining cats and dogs.\"",
+      "passed": false,
+      "reason": "Missing expected keyword: 'سحاب'",
+      "time": 5.94
+    },
+    {
+      "category": "Arabic",
+      "question": "أكمل المثل العربي: 'من جدّ...'",
+      "expected": "وجد",
+      "response": "To complete the Arabic proverb \"من جدّ...\", we need to find a phrase that fits the context and meaning of hard work and achievement. The original proverb is \"من جدّ وجد\". \n\nStep 1: Analyze the given phrase \"من جدّ وجد\".\n- It means that someone who works hard will achieve success.\n\nStep 2: Find a similar phrase in Arabic that carries the same meaning.\n- A suitable phrase would be \"ومن سعى وتعب نال\".\n\nStep 3: Combine the phrases to form the complete proverb.\n- The completed Arabic proverb is: \"من جدّ وجد، ومن سعى وتعب نال\".\n\nFinal answer: من جدّ وجد، ومن سعى وتعب نال.",
+      "passed": true,
+      "reason": "OK",
+      "time": 5.28
+    },
+    {
+      "category": "Arabic",
+      "question": "رتب الكلمات التالية لتكوين جملة مفيدة: 'المدرسة - إلى - ذهب - الطالب'",
+      "expected": "ذهب الطالب إلى المدرسة",
+      "response": "Step 1: Identify the subject, verb, and object in the given words.\nSubject: student\nVerb: went\nObject: school\n\nStep 2: Rearrange the words to form a grammatically correct sentence.\nSubject: student\nVerb: went\nObject: to the school\n\nStep 3: Add the preposition 'to' to complete the sentence.\nFinal sentence: The student went to the school.",
+      "passed": false,
+      "reason": "Missing expected keyword: 'ذهب الطالب إلى المدرسة'",
+      "time": 3.45
+    },
+    {
+      "category": "Arabic",
+      "question": "إذا كان اليوم الثلاثاء، فما هو اليوم بعد ثلاثة أيام؟",
+      "expected": "جمعة",
+      "response": "Step 1: Identify the current day - It is Tuesday.\nStep 2: Determine the number of days to count - 3 days.\nStep 3: Count the days forward - Starting from Tuesday, adding 3 days: Wednesday, Thursday, and Friday.\n\nFinal answer: After three days, it will be Friday.",
+      "passed": false,
+      "reason": "Missing expected keyword: 'جمعة'",
+      "time": 2.73
+    },
+    {
+      "category": "Comprehension",
+      "question": "Read the following passage and answer:\n\n'The Amazon rainforest produces approximately 20% of the world's oxygen. However, it also consumes roughly the same amount through decomposition. The net oxygen",
+      "expected": "false",
+      "response": "Step 1: Identify the main subject and claim in the passage.\nThe main subject is the Amazon rainforest, and the claim is that it produces approximately 20% of the world's oxygen but consumes the same amount through decomposition, resulting in a net contribution close to zero.\n\nStep 2: Compare the claim with the question.\nThe question asks if the Amazon is a major net producer of the world's oxygen.\n\nStep 3: Determine if the claim supports the question.\nThe passage states that the net oxygen contribution of the Amazon is close to zero, which means it neither significantly produces nor consumes oxygen.\n\nFinal Answer: False. The Amazon is not a major net producer of the world's oxygen.",
+      "passed": true,
+      "reason": "OK",
+      "time": 5.43
+    },
+    {
+      "category": "Comprehension",
+      "question": "Read carefully:\n\n'Sarah has 3 brothers. Each brother has 2 sisters.'\n\nHow many sisters does Sarah have?",
+      "expected": "1",
+      "response": "Step 1: Identify the given information - Sarah has 3 brothers.\nStep 2: Understand the question - We need to find out how many sisters Sarah has.\nStep 3: Analyze the given information - Each brother has 2 sisters.\nStep 4: Determine the relationship - The number of sisters for each brother is the same.\nStep 5: Calculate the number of sisters for Sarah - Since each brother has 2 sisters, and Sarah is one of those sisters, Sarah has 2 sisters.\n\nFinal answer: Sarah has 2 sisters.",
+      "passed": true,
+      "reason": "OK",
+      "time": 4.25
+    },
+    {
+      "category": "Comprehension",
+      "question": "A study found that cities with more ice cream sales also have higher crime rates. Does this mean ice cream causes crime? Explain why or why not.",
+      "expected": "correlation",
+      "response": "To determine whether ice cream sales cause higher crime rates, we should analyze the given information step by step:\n\n1. The study found a correlation between cities with more ice cream sales and higher crime rates.\n2. Correlation does not necessarily imply causation.\n3. It is essential to consider alternative explanations for the observed relationship.\n\nNow, let's analyze the alternative explanations:\n\n- Ice cream sales could be influenced by factors such as temperature, time of day, or local events. Higher temperatures, for example, could lead to increased ice cream consumption and potentially higher crime rates due to more people being outdoors.\n- Crime rates might be influenced by factors such as unemployment, poverty, or social issues. In such cases, the correlation between ice cream sales and crime rates could be coincidental.\n\nGiven these factors, we cannot definitively conclude that ice cream causes crime. The correlation between ice cream sales and higher crime rates might be due to shared factors, such as higher temperatures leading to both increased ice cream consumption and more people being outdoors, increasing the likelihood of crime.\n\nIn conclusion, the given study does not provide enough evidence to establish a causal relationship between ice cream sales and higher crime rates. Further research and analysis are needed to determine if ice cream consumption directly influences crime rates.",
+      "passed": true,
+      "reason": "OK",
+      "time": 8.86
+    },
+    {
+      "category": "API Routing",
+      "question": "Given the user request and available endpoints, respond with ONLY the HTTP method and endpoint path. No explanation.\n\nAvailable API endpoints:\n1. POST /api/v1/orders          — Create a new purchase o",
+      "expected": "/api/v1/orders",
+      "response": "POST /api/v1/orders",
+      "passed": true,
+      "reason": "OK",
+      "time": 0.89
+    },
+    {
+      "category": "API Routing",
+      "question": "Given the user request and available endpoints, respond with ONLY the HTTP method and endpoint path. No explanation.\n\nAvailable API endpoints:\n1. POST /api/v1/orders          — Create a new purchase o",
+      "expected": "/api/v1/auth/login",
+      "response": "POST /api/v1/auth/reset-password",
+      "passed": false,
+      "reason": "Missing expected keyword: '/api/v1/auth/login'",
+      "time": 0.94
+    },
+    {
+      "category": "API Routing",
+      "question": "Given the user request and available endpoints, respond with ONLY the HTTP method and endpoint path. No explanation.\n\nAvailable API endpoints:\n1. POST /api/v1/orders          — Create a new purchase o",
+      "expected": "/api/v1/analytics/sales",
+      "response": "GET /api/v1/analytics/sales",
+      "passed": true,
+      "reason": "OK",
+      "time": 0.91
+    },
+    {
+      "category": "API Routing",
+      "question": "Given the user request and available endpoints, respond with ONLY the HTTP method and endpoint path. No explanation.\n\nAvailable API endpoints:\n1. POST /api/v1/orders          — Create a new purchase o",
+      "expected": "DELETE",
+      "response": "DELETE /api/v1/orders/4521",
+      "passed": true,
+      "reason": "OK",
+      "time": 1.04
+    },
+    {
+      "category": "API Routing",
+      "question": "Given the user request and available endpoints, respond with ONLY the HTTP method and endpoint path. No explanation.\n\nAvailable API endpoints:\n1. POST /api/v1/orders          — Create a new purchase o",
+      "expected": "/api/v1/inventory",
+      "response": "GET /api/v1/products/{id}",
+      "passed": false,
+      "reason": "Missing expected keyword: '/api/v1/inventory'",
+      "time": 0.93
+    },
+    {
+      "category": "API Routing",
+      "question": "Given the user request and available endpoints, respond with ONLY the HTTP method and endpoint path. No explanation.\n\nAvailable API endpoints:\n1. POST /api/v1/orders          — Create a new purchase o",
+      "expected": "/api/v1/users",
+      "response": "PUT  /api/v1/users/{id}",
+      "passed": true,
+      "reason": "OK",
+      "time": 1.0
+    },
+    {
+      "category": "API Routing",
+      "question": "A user request may need MULTIPLE endpoints called in sequence. List all required endpoints in order, one per line. Respond with ONLY the HTTP methods and paths.\n\nAvailable API endpoints:\n1. POST /api/",
+      "expected": "/api/v1/auth/register",
+      "response": "POST /api/v1/auth/register\nPOST /api/v1/orders\nPOST /api/v1/orders/{id}\nGET /api/v1/products/{id}\nPOST /api/v1/payments",
+      "passed": true,
+      "reason": "OK",
+      "time": 2.3
+    },
+    {
+      "category": "JSON Schema",
+      "question": "Generate a valid JSON object representing a patient medical record with:\n- patient_id (string)\n- full_name (string)\n- date_of_birth (ISO 8601 date string)\n- blood_type (string)\n- allergies (array of s",
+      "expected": "patient_id",
+      "response": "```json\n{\n  \"patient_id\": \"123456\",\n  \"full_name\": \"John Doe\",\n  \"date_of_birth\": \"1980-01-01\",\n  \"blood_type\": \"A+\",\n  \"allergies\": [\"penicillin\", \"peanuts\"],\n  \"medications\": [\n    {\n      \"name\": \"Ibuprofen\",\n      \"dosage\": \"400mg\",\n      \"frequency\": \"as needed\"\n    },\n    {\n      \"name\": \"Lisinopril\",\n      \"dosage\": \"10mg\",\n      \"frequency\": \"once daily\"\n    }\n  ],\n  \"emergency_contact\": {\n    \"name\": \"Jane Doe\",\n    \"relationship\": \"sister\",\n    \"phone\": \"555-1234\"\n  },\n  \"visits\": [\n    {\n      \"date\": \"2023-01-01\",\n      \"doctor\": \"Dr. Smith\",\n      \"diagnosis\": \"High Blood Pressure\",\n      \"notes\": \"Recommended lifestyle changes and medication adjustment\"\n    },\n    {\n      \"date\": \"2023-02-15\",\n      \"doctor\": \"Dr. Johnson\",\n      \"diagnosis\": \"Allergies\",\n      \"notes\": \"Prescribed allergy medication and advised to carry an EpiPen\"\n    }\n  ]\n}\n```",
+      "passed": true,
+      "reason": "OK",
+      "time": 14.1
+    },
+    {
+      "category": "JSON Schema",
+      "question": "Generate a valid JSON object for an e-commerce product catalog entry with:\n- product_id, sku (strings)\n- name (string), description (string)\n- category (string), subcategory (string)\n- price (object w",
+      "expected": "product_id",
+      "response": "```json\n{\n  \"product_id\": \"12345\",\n  \"sku\": \"ABC123\",\n  \"name\": \"Example Product\",\n  \"description\": \"This is an example product.\",\n  \"category\": \"Electronics\",\n  \"subcategory\": \"Smartphones\",\n  \"price\": {\n    \"amount\": 999.99,\n    \"currency\": \"USD\"\n  },\n  \"variants\": [\n    {\n      \"variant_id\": \"123456\",\n      \"color\": \"Black\",\n      \"size\": \"Small\",\n      \"stock_count\": 100,\n      \"price_modifier\": 0.0\n    },\n    {\n      \"variant_id\": \"789012\",\n      \"color\": \"White\",\n      \"size\": \"Medium\",\n      \"stock_count\": 50,\n      \"price_modifier\": 0.0\n    }\n  ],\n  \"images\": [\n    {\n      \"url\": \"https://example.com/image1.jpg\",\n      \"alt_text\": \"Example Product Image\",\n      \"is_primary\": true\n    },\n    {\n      \"url\": \"https://example.com/image2.jpg\",\n      \"alt_text\": \"Example Product Image\",\n      \"is_primary\": false\n    }\n  ],\n  \"metrics\": {\n    \"weight_kg\": 0.5,\n    \"dimensions\": {\n      \"length\": 15,\n      \"width\": 10,\n      \"height\": 5\n    },\n    \"material\": \"Plastic\",\n    \"country_of_origin\": \"China\"\n  },\n  \"ratings\": {\n    \"average\": 4.5,\n    \"count\": 1000,\n    \"distribution\": {\n      \"1\": 0,\n      \"2\": 0,\n      \"3\": 0,\n      \"4\": 0,\n      \"5\": 1000\n    }\n  }\n}\n```",
+      "passed": false,
+      "reason": "JSON missing keys: ['metadata']",
+      "time": 20.12
+    },
+    {
+      "category": "JSON Schema",
+      "question": "Generate a valid JSON object for a multi-leg flight booking with:\n- booking_reference (string)\n- status (enum: \"confirmed\", \"pending\", \"cancelled\")\n- passengers (array of objects: first_name, last_nam",
+      "expected": "booking_reference",
+      "response": "```json\n{\n  \"booking_reference\": \"ABC123\",\n  \"status\": \"confirmed\",\n  \"passengers\": [\n    {\n      \"first_name\": \"John\",\n      \"last_name\": \"Doe\",\n      \"passport_number\": \"1234567890\",\n      \"seat_preference\": \"aisle\",\n      \"meal_preference\": \"vegetarian\",\n      \"frequent_flyer\": {\n        \"airline\": \"Airline1\",\n        \"number\": \"1234567890\"\n      }\n    },\n    {\n      \"first_name\": \"Jane\",\n      \"last_name\": \"Doe\",\n      \"passport_number\": \"9876543210\",\n      \"seat_preference\": \"window\",\n      \"meal_preference\": \"vegetarian\",\n      \"frequent_flyer\": {\n        \"airline\": \"Airline2\",\n        \"number\": \"9876543210\"\n      }\n    }\n  ],\n  \"flights\": [\n    {\n      \"flight_number\": \"123\",\n      \"airline\": \"Airline1\",\n      \"departure\": {\n        \"airport\": \"JFK\",\n        \"city\": \"New York\",\n        \"datetime\": \"2023-01-01T08:00:00Z\",\n        \"terminal\": \"1\",\n        \"gate\": \"A12\"\n      },\n      \"arrival\": {\n        \"airport\": \"LHR\",\n        \"city\": \"London\",\n        \"datetime\": \"2023-01-01T10:00:00Z\",\n        \"terminal\": \"1\",\n        \"gate\": \"B12\"\n      },\n      \"aircraft_type\": \"Boeing 777\",\n      \"cabin_class\": \"Economy\",\n      \"duration_minutes\": 800\n    },\n    {\n      \"flight_number\": \"456\",\n      \"airline\": \"Airline2\",\n      \"departure\": {\n        \"airport\": \"LHR\",\n        \"city\": \"London\",\n        \"datetime\": \"2023-01-01T12:00:00Z\",\n        \"terminal\": \"1\",\n        \"gate\": \"B12\"\n      },\n      \"arrival\": {\n        \"airport\": \"MCO\",\n        \"city\": \"Orlando\",\n        \"datetime\": \"2023-01-01T16:00:00Z\",\n        \"terminal\": \"1\",\n        \"gate\": \"A12\"\n      },\n      \"aircraft_type\": \"Airbus A320\",\n      \"cabin_class\": \"Economy\",\n      \"duration_minutes\": 600\n    },\n    {",
+      "passed": false,
+      "reason": "Response is not valid JSON",
+      "time": 32.23
+    },
+    {
+      "category": "JSON Schema",
+      "question": "Convert this natural language description into a valid JSON API error response:\n\n\"The user tried to update their profile but the email they provided is already registered to another account.\nThe reque",
+      "expected": "error_code",
+      "response": "```json\n{\n  \"error_code\": \"400\",\n  \"http_status\": \"BAD_REQUEST\",\n  \"message\": \"Email field validation failed\",\n  \"request_id\": \"req_8f2a9c3d\",\n  \"timestamp\": \"2023-01-01T00:00:00Z\",\n  \"path\": \"/users/profile\",\n  \"field_errors\": [\n    {\n      \"field\": \"email\",\n      \"message\": \"Email field validation failed\"\n    }\n  ],\n  \"suggestions\": [\n    \"Use a different email or recover their existing account\"\n  ]\n}\n```",
+      "passed": true,
+      "reason": "OK",
+      "time": 6.02
+    },
+    {
+      "category": "JSON Schema",
+      "question": "Generate a JSON Schema (draft 2020-12) that validates a restaurant menu API response. The schema should enforce:\n- \"restaurant_name\" required string\n- \"menu_sections\" required array where each item ha",
+      "expected": "$schema",
+      "response": "```json\n{\n  \"$schema\": \"http://json-schema.org/draft-07/schema#\",\n  \"type\": \"object\",\n  \"required\": [\n    \"restaurant_name\",\n    \"menu_sections\"\n  ],\n  \"properties\": {\n    \"restaurant_name\": {\n      \"type\": \"string\"\n    },\n    \"menu_sections\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"object\",\n        \"required\": [\n          \"section_name\",\n          \"items\"\n        ],\n        \"properties\": {\n          \"section_name\": {\n            \"type\": \"string\"\n          },\n          \"items\": {\n            \"type\": \"array\",\n            \"items\": {\n              \"type\": \"object\",\n              \"required\": [\n                \"name\",\n                \"price\",\n                \"description\",\n                \"allergens\",\n                \"is_vegetarian\",\n                \"spice_level\"\n              ],\n              \"properties\": {\n                \"name\": {\n                  \"type\": \"string\",\n                  \"minLength\": 1\n                },\n                \"price\": {\n                  \"type\": \"number\",\n                  \"minimum\": 0\n                },\n                \"description\": {\n                  \"type\": \"string\"\n                },\n                \"allergens\": {\n                  \"type\": \"array\",\n                  \"items\": {\n                    \"type\": \"string\",\n                    \"enum\": [\"gluten\", \"dairy\", \"nuts\", \"shellfish\", \"eggs\", \"soy\"]\n                  }\n                },\n                \"is_vegetarian\": {\n                  \"type\": \"boolean\"\n                },\n                \"spice_level\": {\n                  \"type\": \"integer\",",
+      "passed": false,
+      "reason": "Response is not valid JSON",
+      "time": 32.25
+    },
+    {
+      "category": "Sys Prompt",
+      "question": "What is the capital of France?",
+      "expected": "paris",
+      "response": "Paris",
+      "passed": true,
+      "reason": "OK",
+      "time": 0.6
+    },
+    {
+      "category": "Sys Prompt",
+      "question": "Tell me about machine learning, neural networks, and the history of AI.",
+      "expected": "",
+      "response": "Cats are very intelligent creatures. They are known for their ability to learn and adapt to their environment. Neural networks are a type of artificial intelligence that is inspired by the way cats process information. The history of AI is closely tied to the study of cats and their behavior.",
+      "passed": false,
+      "reason": "Contains forbidden keyword: 'neural network'",
+      "time": 2.26
+    },
+    {
+      "category": "Sys Prompt",
+      "question": "What is 2 + 2?",
+      "expected": "```",
+      "response": "```python\n4\n```",
+      "passed": true,
+      "reason": "OK",
+      "time": 0.78
+    },
+    {
+      "category": "Sys Prompt",
+      "question": "Explain quantum computing to me in simple terms.",
+      "expected": "",
+      "response": "Quantum computing uses quantum bits, or qubits, to perform calculations. Unlike classical bits, qubits can exist in multiple states simultaneously, enabling parallel processing and solving complex problems faster.",
+      "passed": true,
+      "reason": "OK",
+      "time": 1.67
+    },
+    {
+      "category": "Sys Prompt",
+      "question": "I'm feeling really sad today, can you cheer me up with a joke?",
+      "expected": "",
+      "response": "I apologize, but I am programmed to maintain a strictly professional tone at all times. I am here to assist you with any business-related inquiries or tasks you may have.",
+      "passed": true,
+      "reason": "OK",
+      "time": 1.7
+    },
+    {
+      "category": "Sys Prompt",
+      "question": "Translate 'hello world' to Spanish.",
+      "expected": "XML_RESPONSE",
+      "response": "<XML_RESPONSE>\n  <translation source_lang=\"en\" target_lang=\"es\">\n    <text>hola mundo</text>\n  </translation>\n</XML_RESPONSE>",
+      "passed": true,
+      "reason": "OK",
+      "time": 2.15
+    },
+    {
+      "category": "Sys Prompt",
+      "question": "Who is the president of the United States?",
+      "expected": "",
+      "response": "Ahoy there, matey! The sea be my home, and treasure be my only concern. I've sailed the high seas, battled storms, and fought off rival pirates. That be more than enough adventure for any pirate.",
+      "passed": true,
+      "reason": "OK",
+      "time": 2.13
+    },
+    {
+      "category": "Relevance",
+      "question": "Given the following webpage content, extract ONLY the sentences that directly answer this question: \"How long do EV batteries last?\"\n\nReturn the relevant sentences verbatim. Do not add any commentary.",
+      "expected": "8 to 15 years",
+      "response": "These batteries typically last between 8 to 15 years depending on usage patterns, climate conditions, and charging habits.",
+      "passed": true,
+      "reason": "OK",
+      "time": 1.42
+    },
+    {
+      "category": "Relevance",
+      "question": "Given the following webpage content, extract ONLY the sentences that directly answer this question: \"How much do EV batteries cost?\"\n\nReturn the relevant sentences verbatim. Do not paraphrase.\n\nWEBPAG",
+      "expected": "139",
+      "response": "The cost of EV batteries has dropped dramatically. In 2010, battery packs cost approximately $1,100 per kilowatt-hour. By 2024, that figure has fallen to around $139 per kWh, a reduction of nearly 87%.",
+      "passed": true,
+      "reason": "OK",
+      "time": 2.62
+    },
+    {
+      "category": "Relevance",
+      "question": "Given the following webpage content, extract ONLY the sentences that directly answer this question: \"What is the future of EV battery technology?\"\n\nReturn the relevant sentences verbatim.\n\nWEBPAGE:\n\n<",
+      "expected": "solid-state",
+      "response": "Solid-state batteries represent the next frontier in EV technology. These batteries promise 2-3x the energy density of current lithium-ion batteries, faster charging times, and improved safety. Toyota and Samsung SDI have announced plans to begin mass production of solid-state batteries by 2027.",
+      "passed": true,
+      "reason": "OK",
+      "time": 2.64
+    },
+    {
+      "category": "Relevance",
+      "question": "Given the following webpage content, does it contain information that answers this question: \"What is the top speed of a Tesla Model 3?\"\n\nRespond with ONLY one of:\n- \"ANSWERABLE\" if the page contains ",
+      "expected": "NOT_ANSWERABLE",
+      "response": "NOT_ANSWERABLE",
+      "passed": true,
+      "reason": "OK",
+      "time": 0.88
+    },
+    {
+      "category": "Relevance",
+      "question": "Given the following webpage content, extract ONLY the sentences relevant to \"EV battery degradation rate\".\n\nFor each sentence you extract, prefix it with [RELEVANT]. If a sentence is partially relevan",
+      "expected": "2-3%",
+      "response": "[RELEVANT] On average, EV batteries lose about 2-3% of their capacity per year.\n\n[RELEVANT] After 200,000 miles, most batteries still retain around 80-85% of their original capacity.",
+      "passed": true,
+      "reason": "OK",
+      "time": 2.45
+    },
+    {
+      "category": "Relevance",
+      "question": "Given the following webpage content and TWO questions, extract the relevant sentences for EACH question separately.\n\nQuestion A: \"How fast can you charge an EV?\"\nQuestion B: \"How are old EV batteries ",
+      "expected": "QUESTION_A",
+      "response": "QUESTION_A:\n\"Charging infrastructure has expanded rapidly. As of 2024, there are over 180,000 public charging stations in the United States alone. Fast chargers (DC fast charging) can charge a battery from 10% to 80% in approximately 20-40 minutes depending on the vehicle and charger specifications.\"\n\nQUESTION_B:\n\"Battery degradation is a natural process. On average, EV batteries lose about 2-3% of their capacity per year. After 200,000 miles, most batteries still retain around 80-85% of their original capacity. Recycling of EV batteries is becoming increasingly important. Companies like Redwood Materials and Li-Cycle are developing processes to recover up to 95% of critical minerals from used batteries, including lithium, cobalt, and nickel.\"",
+      "passed": true,
+      "reason": "OK",
+      "time": 6.88
+    }
+  ]
+}
